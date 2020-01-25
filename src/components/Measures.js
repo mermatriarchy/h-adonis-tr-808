@@ -2,13 +2,16 @@ import React from 'react';
 import Beat from './Beat';
 import { Row } from 'react-bootstrap';
 
-export default function Measures() {
+export default function Measures(props) {
   return (
     <>
-      {/* we'll map the beats based on the number of measures */}
       <Row>
       <div className="instrument-name">Measure</div>
-      <Beat/>
+      {props.totalBeats.map(number => (
+            <Beat
+              key={number}
+            />
+        ))}
     </Row>
     </>
   );

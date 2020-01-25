@@ -1,10 +1,14 @@
 import React from 'react';
 import Beat from './Beat';
 
-export default function Sequence() {
+export default function Sequence(props) {
   return (
     <>
-      <Beat />
+      {props.totalBeats.map(number => (
+        <Beat
+          key={number}
+        />
+      ))}
     </>
   );
 }

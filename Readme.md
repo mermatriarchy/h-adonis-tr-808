@@ -17,8 +17,8 @@ ReactJS
 - [x] Map out component hierarchy from wireframe
 - [x] Get servers running
 - [x] Add basic component structure
-- [] Add Bootstrap
-- [] Add layout
+- [x] Add Bootstrap
+- [x] Add layout
 - [] Add props for components 
     - [] Progress bar animation
     - [] Tempo imput

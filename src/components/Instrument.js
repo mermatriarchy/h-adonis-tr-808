@@ -2,12 +2,16 @@ import React from 'react';
 import Sequence from './Sequence';
 import {Row} from 'react-bootstrap';
 
-export default function Instrument() {
+export default function Instrument(props) {
   return (
     <>
       <Row>
-        <div className="instrument-name">Instrument Name Goes Here</div>
-        <Sequence />
+        <div className="instrument-name">
+            Instrument Number {props.instrumentName}
+        </div>
+        <Sequence 
+          totalBeats={props.totalBeats}
+        />
       </Row>
     </>
   );
