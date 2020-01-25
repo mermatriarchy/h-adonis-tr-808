@@ -14,9 +14,9 @@ ReactJS
 ## Notes
 
 ## TO DO
-- [] Map out component hierarchy from wireframe
-- [] Get servers running
-- [] Add basic component structure
+- [x] Map out component hierarchy from wireframe
+- [x] Get servers running
+- [x] Add basic component structure
 - [] Add Bootstrap
 - [] Add layout
 - [] Add props for components 
