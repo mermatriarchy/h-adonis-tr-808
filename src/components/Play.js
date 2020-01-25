@@ -3,7 +3,7 @@ import React from 'react';
 export default function Play() {
   return (
     <>
-      <div>Play</div>
+      <div className="green-bg">Play</div>
     </>
   );
 }

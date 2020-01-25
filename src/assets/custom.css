@@ -1,0 +1,39 @@
+div {
+  border-radius: 5px;
+  text-align: center;
+}
+
+.instrument-name {
+  width: 10rem;
+}
+
+.beat {
+  width: 3.2rem;
+  height: 3.2rem;
+  margin: .25rem;
+}
+.green-bg {
+  background-color: #00a9a5;
+  color: #fff;
+}
+
+.red-bg, .selected {
+  background-color: #a80021;
+  color: #fff;
+}
+
+.gray-bg {
+  background-color: #d3d3d3;
+}
+
+.active {
+  background-color: #edd500;
+}
+
+.outline {
+  border: 2px solid #000; 
+}
+
+.row {
+    margin-bottom: 1.5rem;
+}

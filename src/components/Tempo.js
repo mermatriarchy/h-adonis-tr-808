@@ -3,7 +3,7 @@ import React from 'react';
 export default function Tempo() {
   return (
     <>
-      <div>BPM</div>
+      <div className="outline">BPM</div>
     </>
   );
 }
