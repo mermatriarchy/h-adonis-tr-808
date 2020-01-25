@@ -31,6 +31,7 @@ ReactJS
 
 ## Extras
 - [] Allow user to add track
-- [] Allow use to save demo? (write to json file or use local storage?)
+- [] Allow use to save demo? (write to js file or use local storage?)
 - [] *T E S T S*
 - [] Responsive considerations
+- [] Make sure colors/contrast are compliant
