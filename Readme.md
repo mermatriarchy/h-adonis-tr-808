@@ -2,11 +2,14 @@
 A simple drum machine built in React & ToneJS
 
 ## Installation
-from the root directory:
-npm install
-in two different tabs run:
-npm run dev-server
-npm run dev-bundle
+from the root directory:  
+npm install  
+in two different tabs run:  
+npm run dev-server  
+npm run dev-bundle  
+
+to run tests:  
+npm test
 
 ## Libraries
 ReactJS

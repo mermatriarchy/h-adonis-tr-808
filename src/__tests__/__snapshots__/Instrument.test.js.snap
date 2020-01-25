@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`correctly renders Instrument component 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="instrument-name"
+  >
+    Instrument Number 
+    xylophone
+  </div>
+  beat
+  beat
+  beat
+  beat
+</div>
+`;
