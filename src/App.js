@@ -13,6 +13,10 @@ export default function App() {
     setIsPlaying(!isPlaying);
   }
 
+  const calcInterval = () => {
+    return (60000/bpm);
+  }
+
   useEffect(() => {
     let interval = null;
     if (isPlaying) {
@@ -22,7 +26,7 @@ export default function App() {
         } else {
           setCurrPosition(0);
         }
-      }, 200);
+      }, calcInterval(bpm));
     } else if (!isPlaying && currPosition !== 0) {
       clearInterval(interval);
     }
