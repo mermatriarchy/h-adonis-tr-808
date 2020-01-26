@@ -10,6 +10,7 @@ export default function Instrument(props) {
             {props.instrumentName}
         </div>
         <Sequence 
+          instrumentSequence={props.instrumentSequence}
           totalBeats={props.totalBeats}
         />
       </Row>
