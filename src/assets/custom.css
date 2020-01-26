@@ -18,13 +18,18 @@ div {
   color: #fff;
 }
 
-.light {
+.light, .demo-btn:hover {
   opacity: .6;
 }
 
 .red-bg, .selected {
   background-color: #a80021;
   color: #fff;
+}
+
+.demo-btn {
+  padding: .5rem;
+  margin: .5rem;
 }
 
 .gray-bg {

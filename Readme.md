@@ -1,5 +1,5 @@
 # Digital TR-808
-A simple drum machine built in React & ToneJS
+A simple drum machine built in React
 
 ## Installation
 from the root directory:  
@@ -22,12 +22,12 @@ ReactJS
 [x] Add basic component structure  
 [x] Add Bootstrap  
 [x] Add layout  
-[] Add props for components   
+[] Add props for components / figure out where to lift state up
     [] Progress bar animation  
     [] Tempo imput  
     [] Pattern/sequence selection  
 [] Add Tone Js? (commit to this before adding interactive parts?)
-[] Add premade demos  
+[x] Add premade demos  
 [] Fix button aligment with beat divs bc ohmygod it's killing me
   
 ## Extras  

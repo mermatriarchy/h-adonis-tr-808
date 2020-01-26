@@ -3,6 +3,7 @@ import Measures from './Measures';
 import Instrument from './Instrument';
 import instruments from '../data/instruments';
 import demos from '../data/demos';
+import { Row } from 'react-bootstrap';
 
 import _ from 'underscore';
 
@@ -16,10 +17,16 @@ export default function Machine() {
   const totalBeats = _.range(numOfMeasures * numOfBeats);
 
   const numOfInstruments = _.range(4);
-
-  {/* demos will need to go here*/}
+  
   return (
     <>
+      <Row>
+        { demos.map( index =>
+            <div className="demo-btn red-bg" key={index.id}>
+              {index.demo_name}
+            </div>
+        )}
+      </Row>
       <Measures 
             totalBeats={totalBeats}
             isMeasure={true}
