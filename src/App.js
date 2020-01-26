@@ -5,6 +5,7 @@ import { Container } from 'react-bootstrap';
 
 export default function App() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [bpm, setBpm] = useState(120);
 
   const togglePlay = () => {
     if (isPlaying) {
@@ -14,6 +15,10 @@ export default function App() {
       setIsPlaying(true);
     }
   }
+
+  const updateBpm = (event) => {
+    setBpm(event.target.value);
+  }
   
   return (
     <>
@@ -21,6 +26,8 @@ export default function App() {
         <header><h1>Digital TR-808</h1></header>
         <MasterControls 
           handlePlay={togglePlay}
+          bpm={bpm}
+          changeBpm={updateBpm}
         />
         <Machine />
       </Container>

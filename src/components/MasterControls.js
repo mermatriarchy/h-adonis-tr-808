@@ -13,9 +13,7 @@ export default function MasterControls(props) {
           </div>
         </Col>
         <Col md={2}>
-          <div>
-            BPM goes here now
-          </div>
+          <input type="number" className="outline" value={props.bpm} onChange={props.changeBpm}></input>
         </Col>
       </Row>
     </>

@@ -36,3 +36,4 @@ ReactJS
 [] *T E S T S*  
 [] Responsive considerations  
 [] Make sure colors/contrast are compliant  
+[] Add max bpm
