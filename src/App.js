@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import MasterControls from './components/MasterControls';
 import Machine from './components/Machine';
 import { Container } from 'react-bootstrap';
@@ -6,15 +6,28 @@ import { Container } from 'react-bootstrap';
 export default function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [bpm, setBpm] = useState(120);
+  const [position] = useState(0);
+  const [currPosition, setCurrPosition] = useState(0); 
 
   const togglePlay = () => {
-    if (isPlaying) {
-      setIsPlaying(false);
-    }
-    else {
-      setIsPlaying(true);
-    }
+    setIsPlaying(!isPlaying);
   }
+
+  useEffect(() => {
+    let interval = null;
+    if (isPlaying) {
+      interval = setInterval(() => {
+        if(currPosition < 15){
+          setCurrPosition(currPosition => currPosition + 1);
+        } else {
+          setCurrPosition(0);
+        }
+      }, 1000);
+    } else if (!isPlaying && currPosition !== 0) {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [isPlaying, currPosition])
 
   const updateBpm = (event) => {
     setBpm(event.target.value);
@@ -29,7 +42,10 @@ export default function App() {
           bpm={bpm}
           changeBpm={updateBpm}
         />
-        <Machine />
+        <Machine 
+          position={position}
+          currPosition={currPosition}
+        />
       </Container>
     </>
   );

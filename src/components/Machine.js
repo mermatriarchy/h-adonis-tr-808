@@ -9,14 +9,16 @@ import _ from 'underscore';
 
 export default function Machine() {
   const [demo, setDemo] = useState(0);
-  //0 can be the variable from the sequencer selection to change with preset array is loaded
   const demoTrack = demos.map( index => index.sequence)[demo]
-  
-  {/* hardcoding these for now, but we'll need to get the num of instruments from our pre-made demo list */}
-  const numOfMeasures = 4;
-  const numOfBeats = 4;
-  const totalBeats = _.range(numOfMeasures * numOfBeats);
 
+   {/* hardcoding these for now, but can make them inputs later */}
+   const numOfMeasures = 4;
+   const numOfBeats = 4;
+   const totalBeats = _.range(numOfMeasures * numOfBeats);
+
+  {/* I had this hard coded at the beginning just to get things working,
+   /* but it should be based on the number of sequences in the demo object &
+   /* I'm short on time */}
   const numOfInstruments = _.range(4);
 
   const changeDemo = (nextDemo) => {
