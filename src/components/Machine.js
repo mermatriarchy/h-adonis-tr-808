@@ -7,7 +7,7 @@ import { Row } from 'react-bootstrap';
 
 import _ from 'underscore';
 
-export default function Machine() {
+export default function Machine(props) {
   const [demo, setDemo] = useState(0);
   const demoTrack = demos.map( index => index.sequence)[demo]
 
@@ -35,9 +35,11 @@ export default function Machine() {
         )}
       </Row>
       <Measures 
-            totalBeats={totalBeats}
-            isMeasure={true}
-          />
+        totalBeats={totalBeats}
+        isMeasure={true}
+        position={props.position}
+        currPosition={props.currPosition}
+      />
       { instruments.map( index => (
         <Instrument 
           key={index.id}
@@ -45,6 +47,8 @@ export default function Machine() {
           numOfInstruments={numOfInstruments}
           instrumentName={index.name}
           instrumentSequence={demoTrack[index.id - 1]}
+          position={props.position}
+          currPosition={props.currPosition}
         />
         ))
       }

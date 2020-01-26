@@ -12,6 +12,8 @@ export default function Instrument(props) {
         <Sequence 
           instrumentSequence={props.instrumentSequence}
           totalBeats={props.totalBeats}
+          position={props.position}
+          currPosition={props.currPosition}
         />
       </Row>
     </>

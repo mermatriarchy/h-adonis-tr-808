@@ -29,6 +29,7 @@ ReactJS
 [] Add Tone Js? (commit to this before adding interactive parts?)
 [x] Add premade demos  
 [] Fix button aligment with beat divs bc ohmygod it's killing me
+[] Adding styling to demo buttons so you know which demo is active
   
 ## Extras  
 [] Allow user to add track  

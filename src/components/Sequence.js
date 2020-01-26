@@ -9,6 +9,8 @@ export default function Sequence(props) {
         <Beat
           key={number}
           isActive={props.instrumentSequence[number]}
+          position={number++}
+          currPosition={props.currPosition}
         />
       ))}
     </>

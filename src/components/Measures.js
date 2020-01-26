@@ -11,6 +11,8 @@ export default function Measures(props) {
             <Beat
               isMeasure={props.isMeasure}
               key={number}
+              position={number++}
+              currPosition={props.currPosition}
             />
         ))}
     </Row>

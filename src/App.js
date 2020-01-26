@@ -22,7 +22,7 @@ export default function App() {
         } else {
           setCurrPosition(0);
         }
-      }, 1000);
+      }, 200);
     } else if (!isPlaying && currPosition !== 0) {
       clearInterval(interval);
     }
