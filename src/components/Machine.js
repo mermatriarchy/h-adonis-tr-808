@@ -1,6 +1,8 @@
 import React from 'react';
 import Measures from './Measures';
 import Instrument from './Instrument';
+import instruments from '../data/instruments';
+
 import _ from 'underscore';
 
 export default function Machine() {
@@ -16,13 +18,14 @@ export default function Machine() {
     <>
       <Measures 
             totalBeats={totalBeats}
+            isMeasure={true}
           />
-      { numOfInstruments.map( index => (
+      { instruments.map( index => (
         <Instrument 
-          key={index}
+          key={index.id}
           totalBeats={totalBeats}
           numOfInstruments={numOfInstruments}
-          instrumentName={index + 1}
+          instrumentName={index.name}
         />
         ))
       }

@@ -12,9 +12,14 @@ div {
   height: 3.2rem;
   margin: .25rem;
 }
+
 .green-bg {
   background-color: #00a9a5;
   color: #fff;
+}
+
+.light {
+  opacity: .6;
 }
 
 .red-bg, .selected {

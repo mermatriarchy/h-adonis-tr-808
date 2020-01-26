@@ -9,6 +9,7 @@ export default function Measures(props) {
       <div className="instrument-name">Measure</div>
       {props.totalBeats.map(number => (
             <Beat
+              isMeasure={props.isMeasure}
               key={number}
             />
         ))}

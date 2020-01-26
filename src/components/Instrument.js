@@ -7,7 +7,7 @@ export default function Instrument(props) {
     <>
       <Row>
         <div className="instrument-name">
-            Instrument Number {props.instrumentName}
+            {props.instrumentName}
         </div>
         <Sequence 
           totalBeats={props.totalBeats}
