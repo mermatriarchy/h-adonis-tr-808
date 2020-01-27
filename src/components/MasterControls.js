@@ -6,7 +6,6 @@ export default function MasterControls(props) {
   return (
     <>
       <Row>  
-        {/* Do play & stop need to be separate? TBD, but I suspect no */}
         <Col md={{span: 2, offset: 8}}>
           <div className="green-bg" onClick={props.handlePlay}>
             Play

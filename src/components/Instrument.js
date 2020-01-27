@@ -3,6 +3,8 @@ import Sequence from './Sequence';
 import {Row} from 'react-bootstrap';
 
 export default function Instrument(props) {
+  {/* Sequence should be lifted up & rendered here, rather than just having
+   /* this be a component that passes down props, but again, ran out of time. */}
   return (
     <>
       <Row>
