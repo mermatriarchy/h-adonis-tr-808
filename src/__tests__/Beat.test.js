@@ -5,7 +5,14 @@ import Beat from '../components/Beat';
 {/* See note in Instrument.test.js about testing.
  /* The below checks that the beat component is rendered correctly. */}
 
-it('correctly renders Beat component', () => {  
-    const BeatComponent = renderer.create(<Beat />).toJSON();
-    expect(BeatComponent).toMatchSnapshot();
-});
+ const props = {
+    key: 0,
+    isActive: true,
+    position: 0,
+    currPosition: 1
+  } 
+  
+  it('correctly renders Beat component', () => {  
+      const BeatComponent = renderer.create(<Beat {...props}/>).toJSON();
+      expect(BeatComponent).toMatchSnapshot();
+  });

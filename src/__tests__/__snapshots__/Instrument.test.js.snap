@@ -7,7 +7,6 @@ exports[`correctly renders Instrument component 1`] = `
   <div
     className="instrument-name"
   >
-    Instrument Number 
     xylophone
   </div>
   beat

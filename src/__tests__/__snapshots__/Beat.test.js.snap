@@ -2,8 +2,6 @@
 
 exports[`correctly renders Beat component 1`] = `
 <div
-  className="beat outline"
->
-  Here's a beat
-</div>
+  className="beat outline selected"
+/>
 `;

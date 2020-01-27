@@ -8,13 +8,16 @@ import Instrument from '../components/Instrument';
  /* should have as the app grows in complexity, but for now this just tests that the
  /* Instrument component renders correctly */}
 
-jest.mock('../components/Beat', () => () => 'beat');
-const props = {
-    totalBeats: [1,2,3,4],
-    instrumentName: "xylophone"
-} 
-
-it('correctly renders Instrument component', () => {  
-    const InstrumentComponent = renderer.create(<Instrument {...props}/>).toJSON();
-    expect(InstrumentComponent).toMatchSnapshot();
-});
+ jest.mock('../components/Beat', () => () => 'beat');
+ const props = {
+     totalBeats: [1,2,3,4],
+     instrumentName: "xylophone",
+     instrumentSequence: [true,true,false,true],
+     position: 2,
+     currPosition: 0
+ } 
+ 
+ it('correctly renders Instrument component', () => {  
+     const InstrumentComponent = renderer.create(<Instrument {...props}/>).toJSON();
+     expect(InstrumentComponent).toMatchSnapshot();
+ });
