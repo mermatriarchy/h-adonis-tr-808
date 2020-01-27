@@ -2,14 +2,14 @@
 A simple drum machine built in React
 
 ## Installation
-from the root directory:  
-`npm install`
+from the root directory:<br/>
+`npm install`<br/>
 in two different tabs run:  
-`npm run dev-server` 
-`npm run dev-bundle`  
+`npm run dev-server` <br/>
+`npm run dev-bundle`  <br/>
 open a tab at localhost:4242 in your browser
 
-to run tests:  
+to run tests:  <br/>
 `npm test`
 
 ## Libraries
@@ -18,7 +18,7 @@ ReactJS
 ## Notes
 I went a little bit over on time for this exercise, but tbh getting to build stuff like this is part of the reason I wanted to become a developer in the first place & I didn’t go over by much. It was mostly because my biggest gotcha came at the very end (see Yikes section below) & I was trying to see if I could quickly rectify the requirement I missed (spoiler: I could not). I’ve also found that the velocity really picks up at the end of projects because everything finally clicks & it’s easier to get things working, so even when I was short on time, I still felt like I had figured out how it all hung together.
 
-This project is built with server-side rendering. I picked React based it’s the JS library that I’m most comfortable using & it’s good for apps that have high user interactivity. The initial commit/my starter files are based on this blog post, which I’ve found helpful as a resource because I like understanding the dependencies that I’m using when I start a project. Create react app is great, but it comes with a lot of extras that I didn’t need for a project of this scope.
+This project is built with server-side rendering. I picked React based it’s the JS library that I’m most comfortable using & it’s good for apps that have high user interactivity. The initial commit/my starter files are based on this [blog post](https://jscomplete.com/learn/1rd-reactful), which I’ve found helpful as a resource because I like understanding the dependencies that I’m using when I start a project. Create react app is great, but it comes with a lot of extras that I didn’t need for a project of this scope.
 
 For an app this size, server-side vs client side rendering has negligible performance differences, so that choice was mostly out of the convenience of having starter files. Though if this project were to scale up, I still might make the choice to use server-side rendering because it results in fewer GET requests that might result from loading the demo tracks, despite having a longer initial load time. 
 
@@ -27,7 +27,7 @@ For an app this size, server-side vs client side rendering has negligible perfor
 ### Process
 For me, the hardest part of any project is just...getting started when I’m working from scratch. Usually when I’m at work I can search for past PRs that had similar requirements, but here I just started with the wireframe. I printed it out & marked it up to get a basic idea of the components I’d want to use & how the state will be stored. I try to avoid over planning because there’s only so much I can be sure of in terms of state/props ownership & I’ve found that the structure reveals itself once I’m actually in it.
 
-Next, I googled around for examples of drum machines in React, which led me to the ToneJS library. I wanted to incorporate it here, but I was a bit too confident about how much I could get done in 4 hours & decided against it pretty quickly. At one point, I managed to get a sound working by copying & pasting some of their example code into my project, but right afterwards I ran into errors that I could tell would send me down a rabbit hole that weren’t worth sacrificing basic requirements. Basically, I think about this all the time when I’m working on projects.
+Next, I googled around for examples of drum machines in React, which led me to the ToneJS library. I wanted to incorporate it here, but I was a bit [too confident](https://github.com/mermatriarchy/h-adonis-tr-808/blob/master/extras/meme.png) about how much I could get done in 4 hours & decided against it pretty quickly. At one point, I managed to get a sound working by copying & pasting some of their example code into my project, but right afterwards I ran into errors that I could tell would send me down a rabbit hole that weren’t worth sacrificing basic requirements. Basically, I think about [this](https://jscomplete.com/learn/pro-programmer/beginner-programmers-mistakes) all the time when I’m working on projects.
 
 ### Data
 One thing that would make my code more scalable would be to modify slightly how the Demo tracks are stored to look more like this:
@@ -37,22 +37,23 @@ One thing that would make my code more scalable would be to modify slightly how 
       demo_name: "Demo 1",
       sequence: [
         { instrument_id: 1,
-          track: [true,false,false,false, true, false, false, false, true, false, false, false, true, false, false, false]
+          track: [true,false,false,false]
         },
         { instrument_id: 2,
-          track: [false,false,false, false, true, false, false, false, false, false, false, false, true, false, false, false]
+          track: [false,false,false, false]
         },
         { instrument_id: 3,
-          track: [false,false,true,false,false,false,true,false,false,false,true,false,false,false,true,false]
+          track: [false,false,true,false]
         },
         { instrument_id: 4,
-          track: [true,false,false,false,true,false,false,false,true,false,false,false,true,false,false,false]
+          track: [true,false,false,false]
         }
       ]
-    }```
+    }
+```
 
 Because I imagine the data being modeled like this in a db:
-![schema](/extras/schema.png)
+![schema](https://github.com/mermatriarchy/h-adonis-tr-808/blob/master/extras/schema.jpg)
 
 Indexing the sequences on an instrument_id would make it easier to count the number of instruments, load its sequence & later find the sequence to update when a user clicks a beat to make it active/inactive. Right now my project relies on having 4 instruments & each demo using 4 instruments, but what would happen if one of the demos had 5 instruments? Adjusting the data a little bit to account for this would make the dependency a little bit less precarious.
 
@@ -75,9 +76,9 @@ I worked on this piecemeal so I could walk away if I got stuck on something & no
 [x] Add Bootstrap<br/>
 [x] Add layout<br/>
 [] Add props for components / figure out where to lift state up<br/>
-    [] Progress bar animation<br/>
-    [] Tempo imput<br/>
-    [] Pattern/sequence selection<br/>
+    - [] Progress bar animation<br/>
+    - [] Tempo imput<br/>
+    - [] Pattern/sequence selection<br/>
 [] Add Tone Js? (commit to this before adding interactive parts?)<br/>
 [x] Add premade demos<br/>
 [] Fix button aligment with beat divs bc ohmygod it's killing me<br/>
