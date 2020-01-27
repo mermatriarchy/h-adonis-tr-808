@@ -32,7 +32,27 @@ Next, I googled around for examples of drum machines in React, which led me to t
 ### Data
 One thing that would make my code more scalable would be to modify slightly how the Demo tracks are stored to look more like this:
 
+```{ 
+      id: 1,
+      demo_name: "Demo 1",
+      sequence: [
+        { instrument_id: 1,
+          track: [true,false,false,false, true, false, false, false, true, false, false, false, true, false, false, false]
+        },
+        { instrument_id: 2,
+          track: [false,false,false, false, true, false, false, false, false, false, false, false, true, false, false, false]
+        },
+        { instrument_id: 3,
+          track: [false,false,true,false,false,false,true,false,false,false,true,false,false,false,true,false]
+        },
+        { instrument_id: 4,
+          track: [true,false,false,false,true,false,false,false,true,false,false,false,true,false,false,false]
+        }
+      ]
+    }```
+
 Because I imagine the data being modeled like this in a db:
+![schema](/extras/schema.png)
 
 Indexing the sequences on an instrument_id would make it easier to count the number of instruments, load its sequence & later find the sequence to update when a user clicks a beat to make it active/inactive. Right now my project relies on having 4 instruments & each demo using 4 instruments, but what would happen if one of the demos had 5 instruments? Adjusting the data a little bit to account for this would make the dependency a little bit less precarious.
 
@@ -40,7 +60,7 @@ Indexing the sequences on an instrument_id would make it easier to count the num
 I used Jest to write some basic tests for some of the components in this project. I’m not particularly dogmatic about Jest, but I’m comfortable with it & I’ve been able to teach myself how to implement it with online tutorials pretty easily & it reminds me a lot of rspec, which we use at my current company for ruby testing (we aim for 100% test coverage on the backend, though we don’t current use TDD on the front end). This project doesn’t have full test coverage, but I wanted to demonstrate an understanding of testing & set up the infrastructure for it. Ideally, I’d aim for test coverage for the following for each component:
 1. Component rendering - does the component render correctly?
 2. Props - does the component return the default props? Can it receive a custom value & match the prop afterthe component renders? 
-3. Data types - what kind of data is returned from the different components? e.g. does the isPlaying statereturn a boolean?
+3. Data types - what kind of data is returned from the different components? e.g. does the `isPlaying` state return a boolean?
 4. Events - was the event called? Was the expected behavior executed when the event is simulated?
 5. Conditions - does the component render differently based on the conditions? e.g. the number of sequencesthat render would change depending on the number of instruments that are in a given demo
 6. State - does the current state return as expected? Does the modified state return as expected if wesimulate a state change?
