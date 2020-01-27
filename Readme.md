@@ -37,19 +37,20 @@ One thing that would make my code more scalable would be to modify slightly how 
       demo_name: "Demo 1",
       sequence: [
         { instrument_id: 1,
-          track: [true,false,false,false, true, false, false, false, true, false, false, false, true, false, false, false]
+          track: [true,false,false,false]
         },
         { instrument_id: 2,
-          track: [false,false,false, false, true, false, false, false, false, false, false, false, true, false, false, false]
+          track: [false,false,false, false]
         },
         { instrument_id: 3,
-          track: [false,false,true,false,false,false,true,false,false,false,true,false,false,false,true,false]
+          track: [false,false,true,false]
         },
         { instrument_id: 4,
-          track: [true,false,false,false,true,false,false,false,true,false,false,false,true,false,false,false]
+          track: [true,false,false,false]
         }
       ]
-    }```
+    }
+```
 
 Because I imagine the data being modeled like this in a db:
 ![schema](/extras/schema.png)
